@@ -7,4 +7,5 @@
     <string name="ez_button_string">EZ</string>
     <string name="two_ez_button_string">2EZ</string>
     <string name="not_ez_button_string">NOT EZ</string>
+    <string name="title_activity_game_play">GamePlay</string>
 </resources>
