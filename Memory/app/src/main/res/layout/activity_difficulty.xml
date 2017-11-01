@@ -10,21 +10,42 @@
         android:id="@+id/select_difficulty_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:text="@string/select_difficulty_string"
         android:textAlignment="center"
         android:textSize="36sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="43dp"
-        android:layout_marginLeft="121dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/two_ez_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:text="@string/two_ez_button_string"
-        android:layout_marginLeft="148dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select_difficulty_tv" />
+
+    <Button
+        android:id="@+id/ez_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/ez_button_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two_ez_button" />
+
+    <Button
+        android:id="@+id/not_ez_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/not_ez_button_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ez_button" />
 </android.support.constraint.ConstraintLayout>

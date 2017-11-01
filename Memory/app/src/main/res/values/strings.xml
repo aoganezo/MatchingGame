@@ -4,9 +4,9 @@
     <string name="start_button_string">Start</string>
     <string name="high_scores_button_string">High Scores</string>
     <string name="select_difficulty_string">Select\nDifficulty</string>
-    <string name="ez_button_string">EZ</string>
-    <string name="two_ez_button_string">2EZ</string>
-    <string name="not_ez_button_string">NOT EZ</string>
+    <string name="ez_button_string">ez</string>
+    <string name="two_ez_button_string">2ez</string>
+    <string name="not_ez_button_string">not ez</string>
     <string name="title_activity_game_play">GamePlay</string>
     <string name="curScore">0</string>
 </resources>

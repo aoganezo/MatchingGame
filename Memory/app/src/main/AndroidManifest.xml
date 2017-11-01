@@ -20,7 +20,8 @@
         <activity
             android:name=".GamePlay"
             android:label="@string/title_activity_game_play"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LeaderboardActivity"></activity>
     </application>
 
 </manifest>
