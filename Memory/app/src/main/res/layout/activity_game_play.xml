@@ -20,12 +20,19 @@
         android:layout_marginTop="32dp"
         app:layout_constraintHorizontal_bias="0.501" />
 
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
     <GridView
         android:id="@+id/gridview"
         android:layout_width="371dp"
         android:layout_height="469dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="90dp" />
+        tools:layout_editor_absoluteY="90dp"
+        android:numColumns="auto_fit"
+        android:gravity="center" />
 
 
 </android.support.constraint.ConstraintLayout>
