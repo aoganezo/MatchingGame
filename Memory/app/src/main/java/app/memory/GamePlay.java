@@ -18,6 +18,7 @@ import android.widget.TextView;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.logging.Handler;
 
 public class GamePlay extends AppCompatActivity {
     ImageView iv1,iv2,iv3,iv4,iv5,iv6,iv7,iv8,iv9,iv10,iv11,iv12;
@@ -111,14 +112,138 @@ public class GamePlay extends AppCompatActivity {
         Collections.shuffle(Arrays.asList(imageIds));
 
         View.OnClickListener imageClickListener = new View.OnClickListener() {
+            //Log.i("test", "test1, gameplay, gridview created");
+            int theCard;
             @Override
             public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.iv1:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv2:
+                        int theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv3:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv4:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv5:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv6:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv7:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv8:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv9:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv10:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv11:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                    case R.id.iv12:
+                        theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv1, theCard);
+                        break;
+                }
 
             }
         };
     }
-    private void frontOfCardResources() {
 
+    private void flipCard(ImageView iv, int card) {
+        if (imageIds[card] == 101) {
+            iv.setImageResource(img01);
+        } else if (imageIds[card] == 102) {
+            iv.setImageResource(img02);
+        } else if (imageIds[card] == 103) {
+            iv.setImageResource(img03);
+        } else if (imageIds[card] == 104) {
+            iv.setImageResource(img04);
+        } else if (imageIds[card] == 105) {
+            iv.setImageResource(img05);
+        } else if (imageIds[card] == 106) {
+            iv.setImageResource(img06);
+        } else if (imageIds[card] == 107) {
+            iv.setImageResource(img07);
+        } else if (imageIds[card] == 108) {
+            iv.setImageResource(img08);
+        } else if (imageIds[card] == 109) {
+            iv.setImageResource(img09);
+        } else if (imageIds[card] == 110) {
+            iv.setImageResource(img11);
+        } else if (imageIds[card] == 111) {
+            iv.setImageResource(img11);
+        } else if (imageIds[card] == 112) {
+            iv.setImageResource(img12);
+        }
+
+
+        //check which image is selected and save it to temp var
+        if (cardNumber == 1) {
+            firstCard = imageIds[card];
+            if (firstCard > 200) {
+                firstCard = firstCard - 100;
+            }
+            cardNumber = 2;
+            clickedFirst = card;
+
+            iv.setEnabled(false);
+        } else if (cardNumber == 2) {
+            secondCard = imageIds[card];
+            if (secondCard > 200) {
+                secondCard = secondCard - 100;
+            }
+            cardNumber = 1;
+            clickedSecond = card;
+
+            iv1.setEnabled(false);
+            iv2.setEnabled(false);
+            iv3.setEnabled(false);
+            iv4.setEnabled(false);
+            iv5.setEnabled(false);
+            iv6.setEnabled(false);
+            iv7.setEnabled(false);
+            iv8.setEnabled(false);
+            iv9.setEnabled(false);
+            iv10.setEnabled(false);
+            iv11.setEnabled(false);
+            iv12.setEnabled(false);
+
+//            Handler handler = new Handler();
+//            Handler
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    calculate();
+//                }
+//            }
+//        }, 1000);
+//
+
+    }}
+
+    private void frontOfCardResources() {
         img01 = R.drawable.hippo;
         img02 = R.drawable.hippo;
         img03 = R.drawable.hippo;
@@ -133,14 +258,6 @@ public class GamePlay extends AppCompatActivity {
         img12 = R.drawable.hippo;
 
     }
-
-
-
-
-
-
-
-//        Log.i("test", "test1, gameplay, gridview created");
 //
 //        gridView.setOnItemClickListener(new OnItemClickListener() {
 //            public void onItemClick(AdapterView<?> parent,
@@ -152,6 +269,6 @@ public class GamePlay extends AppCompatActivity {
 //                startActivity(i);
 //            }
 //        });
-    
+
 
 }
