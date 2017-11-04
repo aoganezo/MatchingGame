@@ -20,25 +20,32 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class GamePlay extends AppCompatActivity {
+    ImageView iv1,iv2,iv3,iv4,iv5,iv6,iv7,iv8,iv9,iv10,iv11,iv12;
     GridView gridView;
+    int firstCard, secondCard;
+    int clickedFirst, clickedSecond;
+    int cardNumber = 1;
+    TextView score;
+    Integer[] imageIds = {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112};
+    int img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
 
-    String[] values = {
+    /*String[] values = {
             "Hippo",
             "Hippo",
             "Hippo",
             "Hippo",
             "Hippo",
             "Hippo",
-    };
+    };*/
 
-    int[] images = {
+    /*int[] images = {
             R.drawable.hippo,
             R.drawable.hippo,
             R.drawable.hippo,
             R.drawable.hippo,
             R.drawable.hippo,
             R.drawable.hippo,
-    };
+    };*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,28 +77,20 @@ public class GamePlay extends AppCompatActivity {
         }
         */
 
-        ImageView iv1 = (ImageView) findViewById(R.id.iv1);
-        ImageView iv2 = (ImageView) findViewById(R.id.iv2);
-        ImageView iv3 = (ImageView) findViewById(R.id.iv3);
-        ImageView iv4 = (ImageView) findViewById(R.id.iv4);
-        ImageView iv5 = (ImageView) findViewById(R.id.iv5);
-        ImageView iv6 = (ImageView) findViewById(R.id.iv6);
-        ImageView iv7 = (ImageView) findViewById(R.id.iv7);
-        ImageView iv8 = (ImageView) findViewById(R.id.iv8);
-        ImageView iv9 = (ImageView) findViewById(R.id.iv9);
-        ImageView iv10 = (ImageView) findViewById(R.id.iv10);
-        ImageView iv11 = (ImageView) findViewById(R.id.iv11);
-        ImageView iv12 = (ImageView) findViewById(R.id.iv12);
+        iv1 = (ImageView) findViewById(R.id.iv1);
+        iv2 = (ImageView) findViewById(R.id.iv2);
+        iv3 = (ImageView) findViewById(R.id.iv3);
+        iv4 = (ImageView) findViewById(R.id.iv4);
+        iv5 = (ImageView) findViewById(R.id.iv5);
+        iv6 = (ImageView) findViewById(R.id.iv6);
+        iv7 = (ImageView) findViewById(R.id.iv7);
+        iv8 = (ImageView) findViewById(R.id.iv8);
+        iv9 = (ImageView) findViewById(R.id.iv9);
+        iv10 = (ImageView) findViewById(R.id.iv10);
+        iv11 = (ImageView) findViewById(R.id.iv11);
+        iv12 = (ImageView) findViewById(R.id.iv12);
 
-        Integer imageIds = {00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12};
-
-        int firstCard, secondCard;
-        int clickedFirst, clickedSecond;
-        int cardNumber = 1;
-
-        int turn = 1;
-
-        TextView score = (TextView) findViewById(R.id.score);
+        score = (TextView) findViewById(R.id.score);
 
         iv1.setTag("0");
         iv1.setTag("1");
@@ -111,10 +110,15 @@ public class GamePlay extends AppCompatActivity {
 
         Collections.shuffle(Arrays.asList(imageIds));
 
+        View.OnClickListener imageClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        };
     }
     private void frontOfCardResources() {
-        int img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
+
         img01 = R.drawable.hippo;
         img02 = R.drawable.hippo;
         img03 = R.drawable.hippo;
@@ -135,8 +139,8 @@ public class GamePlay extends AppCompatActivity {
 
 
 
-//
-        Log.i("test", "test1, gameplay, gridview created");
+
+//        Log.i("test", "test1, gameplay, gridview created");
 //
 //        gridView.setOnItemClickListener(new OnItemClickListener() {
 //            public void onItemClick(AdapterView<?> parent,
@@ -148,13 +152,6 @@ public class GamePlay extends AppCompatActivity {
 //                startActivity(i);
 //            }
 //        });
-
-
-
-
-
-
-
-    }
+    
 
 }
