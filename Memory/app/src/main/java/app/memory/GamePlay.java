@@ -111,7 +111,7 @@ public class GamePlay extends AppCompatActivity {
 
         Collections.shuffle(Arrays.asList(imageIds));
 
-        
+
     }
     private void frontOfCardResources() {
         int img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
@@ -135,7 +135,7 @@ public class GamePlay extends AppCompatActivity {
 
 
 
-
+//
         Log.i("test", "test1, gameplay, gridview created");
 //
 //        gridView.setOnItemClickListener(new OnItemClickListener() {
