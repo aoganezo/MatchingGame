@@ -18,7 +18,7 @@ import android.widget.TextView;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.logging.Handler;
+import android.os.Handler;
 
 public class GamePlay extends AppCompatActivity {
     ImageView iv1,iv2,iv3,iv4,iv5,iv6,iv7,iv8,iv9,iv10,iv11,iv12;
@@ -230,18 +230,86 @@ public class GamePlay extends AppCompatActivity {
             iv11.setEnabled(false);
             iv12.setEnabled(false);
 
-//            Handler handler = new Handler();
-//            Handler
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    calculate();
-//                }
-//            }
-//        }, 1000);
-//
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    calculate();
+                }
+            }, 1000);
+        }
+    }
 
-    }}
+    public void calculate() {
+        if (firstCard == secondCard) {
+            if (clickedFirst == 0) {
+                iv1.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 1) {
+                iv2.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 2) {
+                iv3.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 3) {
+                iv4.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 4) {
+                iv5.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 5) {
+                iv6.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 6) {
+                iv7.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 7) {
+                iv8.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 8) {
+                iv9.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 9) {
+                iv10.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 10) {
+                iv11.setVisibility(View.INVISIBLE);
+            } else if (clickedFirst == 11) {
+                iv12.setVisibility(View.INVISIBLE);
+            }
+        }
+        if (clickedSecond == 0) {
+            if (clickedSecond == 0) {
+                iv1.setVisibility(View.INVISIBLE);
+            } else if (clickedSecond == 1) {
+                iv2.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 2) {
+                iv3.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 3) {
+                iv4.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 4) {
+                iv5.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 5) {
+                iv6.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 6) {
+                iv7.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 7) {
+                iv8.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 8) {
+                iv9.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 9) {
+                iv10.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 10) {
+                iv11.setVisibility(View.INVISIBLE);
+            }
+            else if (clickedSecond == 11) {
+                iv12.setVisibility(View.INVISIBLE);
+            }
+        }
+    }
+    if (turn == 1) {
+        platerPoints++;
+        t
+    }
 
     private void frontOfCardResources() {
         img01 = R.drawable.hippo;
