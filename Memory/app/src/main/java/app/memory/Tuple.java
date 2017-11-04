@@ -1,10 +1,12 @@
 package app.memory;
 
+import java.util.Comparator;
+
 /**
  * Created by safea on 10/31/2017.
  */
 
-public class Tuple implements Comparable<Tuple> {
+public class Tuple {
 
     private String name;
     private int score;
@@ -17,13 +19,11 @@ public class Tuple implements Comparable<Tuple> {
     public String getName(){
         return this.name;
     }
+
     public int getScore(){
         return this.score;
     }
 
-    public int compareTo(Tuple that){
-        return Integer.compare(this.getScore(), that.getScore());
-    }
 }
 
 
