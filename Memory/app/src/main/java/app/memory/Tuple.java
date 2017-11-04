@@ -4,7 +4,7 @@ package app.memory;
  * Created by safea on 10/31/2017.
  */
 
-public class Tuple {
+public class Tuple implements Comparable<Tuple> {
 
     private String name;
     private int score;
@@ -15,9 +15,15 @@ public class Tuple {
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
-    public int getscore(){
-        return score;
+    public int getScore(){
+        return this.score;
+    }
+
+    public int compareTo(Tuple that){
+        return Integer.compare(this.getScore(), that.getScore());
     }
 }
+
+

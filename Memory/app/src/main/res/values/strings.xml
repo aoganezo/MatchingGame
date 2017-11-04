@@ -9,4 +9,9 @@
     <string name="not_ez_button_string">not ez</string>
     <string name="title_activity_game_play">GamePlay</string>
     <string name="curScore">0</string>
+    <string name="score_blank"></string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="name_blank"></string>
+
+
 </resources>

@@ -6,4 +6,181 @@
     android:layout_height="match_parent"
     tools:context="app.memory.LeaderboardActivity">
 
+    <TextView
+        android:id="@+id/leaderboard_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/leaderboard"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/one_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="76dp"
+        android:text="1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboard_tv" />
+
+    <TextView
+        android:id="@+id/two_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/one_tv" />
+
+    <TextView
+        android:id="@+id/three_tv"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two_tv" />
+
+    <TextView
+        android:id="@+id/four_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="4"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three_tv" />
+
+    <TextView
+        android:id="@+id/five_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="5"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four_tv" />
+
+    <TextView
+        android:id="@+id/name1_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/name_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/one_tv"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboard_tv" />
+
+    <TextView
+        android:id="@+id/name2_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/name_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/two_tv"
+        app:layout_constraintTop_toBottomOf="@+id/name1_tv" />
+
+    <TextView
+        android:id="@+id/name3_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/name_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/three_tv"
+        app:layout_constraintTop_toBottomOf="@+id/name2_tv" />
+
+    <TextView
+        android:id="@+id/name4_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/name_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/four_tv"
+        app:layout_constraintTop_toBottomOf="@+id/name3_tv" />
+
+    <TextView
+        android:id="@+id/name5_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/name_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/five_tv"
+        app:layout_constraintTop_toBottomOf="@+id/name4_tv" />
+
+    <TextView
+        android:id="@+id/score1_tv"
+        android:layout_width="3dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/score_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/name1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboard_tv" />
+
+    <TextView
+        android:id="@+id/score2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/score_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/name2_tv"
+        app:layout_constraintTop_toBottomOf="@+id/score1_tv" />
+
+    <TextView
+        android:id="@+id/score3_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/score_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/name3_tv"
+        app:layout_constraintTop_toBottomOf="@+id/score2_tv" />
+
+    <TextView
+        android:id="@+id/score4_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/score_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/name4_tv"
+        app:layout_constraintTop_toBottomOf="@+id/score3_tv" />
+
+    <TextView
+        android:id="@+id/score5_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/score_blank"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/name5_tv"
+        app:layout_constraintTop_toBottomOf="@+id/score4_tv" />
+
 </android.support.constraint.ConstraintLayout>
