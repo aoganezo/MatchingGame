@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +32,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
 
         //scores.add(score);
-        
+
         Collections.sort(scores, Collections.reverseOrder());
 
 
@@ -75,6 +77,15 @@ public class LeaderboardActivity extends AppCompatActivity {
             scores.remove(6);
         }
 
+        Button home = (Button) findViewById(R.id.home_button);
+
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent to_home = new Intent(LeaderboardActivity.this, MainActivity.class);
+                startActivity(to_home);
+            }
+        });
         /*
 
 
