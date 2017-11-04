@@ -1,5 +1,7 @@
 package app.memory;
 
+import java.util.Comparator;
+
 /**
  * Created by safea on 10/31/2017.
  */
@@ -15,9 +17,13 @@ public class Tuple {
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
-    public int getscore(){
-        return score;
+
+    public int getScore(){
+        return this.score;
     }
+
 }
+
+
