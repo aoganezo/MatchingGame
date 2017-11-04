@@ -27,11 +27,11 @@ public class LeaderboardActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        // String name = intent.getStringExtra("name");
         int score = intent.getIntExtra("score", 0);
 
 
-        //scores.add(score);
+        scores.add(score);
 
         Collections.sort(scores, Collections.reverseOrder());
 

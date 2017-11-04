@@ -12,6 +12,7 @@
     <string name="score_blank"></string>
     <string name="leaderboard">Leaderboard</string>
     <string name="name_blank"></string>
+    <string name="final_score_string">0</string>
 
 
 </resources>

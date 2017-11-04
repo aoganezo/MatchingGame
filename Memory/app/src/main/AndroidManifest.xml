@@ -21,7 +21,8 @@
             android:name=".GamePlay"
             android:label="@string/title_activity_game_play"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LeaderboardActivity"></activity>
+        <activity android:name=".LeaderboardActivity" />
+        <activity android:name=".GameOverActivity"></activity>
     </application>
 
 </manifest>

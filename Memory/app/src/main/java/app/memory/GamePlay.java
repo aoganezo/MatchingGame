@@ -27,6 +27,7 @@ public class GamePlay extends AppCompatActivity {
     int clickedFirst, clickedSecond;
     int cardNumber = 1;
     TextView score;
+    int points = 0;
     Integer[] imageIds = {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112};
     int img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
 
@@ -304,12 +305,65 @@ public class GamePlay extends AppCompatActivity {
             else if (clickedSecond == 11) {
                 iv12.setVisibility(View.INVISIBLE);
             }
+            points ++;
+            score.setText("Score: " + points);
+
+
+        }
+
+        //  Needs a drawable named back
+
+        else{
+            iv1.setImageResource(R.drawable.back);
+            iv2.setImageResource(R.drawable.back);
+            iv3.setImageResource(R.drawable.back);
+            iv4.setImageResource(R.drawable.back);
+            iv5.setImageResource(R.drawable.back);
+            iv6.setImageResource(R.drawable.back);
+            iv7.setImageResource(R.drawable.back);
+            iv8.setImageResource(R.drawable.back);
+            iv9.setImageResource(R.drawable.back);
+            iv10.setImageResource(R.drawable.back);
+            iv11.setImageResource(R.drawable.back);
+            iv12.setImageResource(R.drawable.back);
+
+        }
+
+        iv1.setEnabled(true);
+        iv2.setEnabled(true);
+        iv3.setEnabled(true);
+        iv4.setEnabled(true);
+        iv5.setEnabled(true);
+        iv6.setEnabled(true);
+        iv7.setEnabled(true);
+        iv8.setEnabled(true);
+        iv9.setEnabled(true);
+        iv10.setEnabled(true);
+        iv11.setEnabled(true);
+        iv12.setEnabled(true);
+
+        checkEndGame();
+    }
+
+    private void checkEndGame(){
+        if (iv1.getVisibility() == View.INVISIBLE &&
+                iv2.getVisibility() == View.INVISIBLE &&
+                iv3.getVisibility() == View.INVISIBLE &&
+                iv4.getVisibility() == View.INVISIBLE &&
+                iv5.getVisibility() == View.INVISIBLE &&
+                iv6.getVisibility() == View.INVISIBLE &&
+                iv7.getVisibility() == View.INVISIBLE &&
+                iv8.getVisibility() == View.INVISIBLE &&
+                iv9.getVisibility() == View.INVISIBLE &&
+                iv10.getVisibility() == View.INVISIBLE &&
+                iv11.getVisibility() == View.INVISIBLE &&
+                iv12.getVisibility() == View.INVISIBLE ) {
+            Intent to_game_over = new Intent(GamePlay.this, GameOverActivity.class);
+            to_game_over.putExtra("score", points);
+            startActivity(to_game_over);
         }
     }
-    if (turn == 1) {
-        platerPoints++;
-        t
-    }
+
 
     private void frontOfCardResources() {
         img01 = R.drawable.hippo;
