@@ -183,19 +183,19 @@ public class GamePlay extends AppCompatActivity {
 
     private void flipCard(ImageView iv, int card) {
         Log.i("test", "flipcard() called");
-            if (imageIds[card] == 101) {
+            if (imageIds[card] == 101 || imageIds[card] == 201) {
                 iv.setImageResource(img01);
-            } else if (imageIds[card] == 102) {
+            } else if (imageIds[card] == 102 || imageIds[card] == 202) {
                 iv.setImageResource(img02);
-            } else if (imageIds[card] == 103) {
+            } else if (imageIds[card] == 103 || imageIds[card] == 203) {
                 iv.setImageResource(img03);
-            } else if (imageIds[card] == 104) {
+            } else if (imageIds[card] == 104 || imageIds[card] == 204) {
                 iv.setImageResource(img04);
-            } else if (imageIds[card] == 105) {
+            } else if (imageIds[card] == 105 || imageIds[card] == 205) {
                 iv.setImageResource(img05);
-            } else if (imageIds[card] == 106) {
+            } else if (imageIds[card] == 106 || imageIds[card] == 206) {
                 iv.setImageResource(img06);
-            } else if (imageIds[card] == 201) {
+            } /*else if (imageIds[card] == 201) {
                 iv.setImageResource(img07);
             } else if (imageIds[card] == 202) {
                 iv.setImageResource(img08);
@@ -205,9 +205,9 @@ public class GamePlay extends AppCompatActivity {
                 iv.setImageResource(img11);
             } else if (imageIds[card] == 205) {
                 iv.setImageResource(img11);
-        } else if (imageIds[card] == 206) {
-            iv.setImageResource(img12);
-        }
+            } else if (imageIds[card] == 206) {
+                iv.setImageResource(img12);
+            } */
 
 
         //check which image is selected and save it to temp var
@@ -257,7 +257,7 @@ public class GamePlay extends AppCompatActivity {
     }
 
     public void calculate() {
-        Log.i("test", "calculate() called");
+        Log.i("test", "calculate() called, firstcard="+firstCard+", secondcard="+secondCard);
         if (firstCard == secondCard) {
             Log.i("test", "MATCHED!!!");
             if (clickedFirst == 0) {
@@ -290,35 +290,25 @@ public class GamePlay extends AppCompatActivity {
                 iv1.setVisibility(View.INVISIBLE);
             } else if (clickedSecond == 1) {
                 iv2.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 2) {
+            } else if (clickedSecond == 2) {
                 iv3.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 3) {
+            } else if (clickedSecond == 3) {
                 iv4.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 4) {
+            } else if (clickedSecond == 4) {
                 iv5.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 5) {
+            } else if (clickedSecond == 5) {
                 iv6.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 6) {
+            } else if (clickedSecond == 6) {
                 iv7.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 7) {
+            } else if (clickedSecond == 7) {
                 iv8.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 8) {
+            } else if (clickedSecond == 8) {
                 iv9.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 9) {
+            } else if (clickedSecond == 9) {
                 iv10.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 10) {
+            } else if (clickedSecond == 10) {
                 iv11.setVisibility(View.INVISIBLE);
-            }
-            else if (clickedSecond == 11) {
+            } else if (clickedSecond == 11) {
                 iv12.setVisibility(View.INVISIBLE);
             }
 
@@ -384,17 +374,11 @@ public class GamePlay extends AppCompatActivity {
     private void frontOfCardResources() {
         Log.i("test", "test, entered front resources");
         img01 = R.mipmap.hippo;
-        img02 = R.mipmap.hippo;
-        img03 = R.mipmap.img1;
-        img04 = R.mipmap.img1;
-        img05 = R.mipmap.img2;
-        img06 = R.mipmap.img2;
-        img07 = R.mipmap.img3;
-        img08 = R.mipmap.img3;
-        img09 = R.mipmap.img4;
-        img10 = R.mipmap.img4;
-        img11 = R.mipmap.img5;
-        img12 = R.mipmap.img5;
+        img02 = R.mipmap.img1;
+        img03 = R.mipmap.img2;
+        img04 = R.mipmap.img3;
+        img05 = R.mipmap.img4;
+        img06 = R.mipmap.img5;
         Log.i("test", "end fron resources");
     }
 }
