@@ -29,7 +29,7 @@ public class GamePlay extends AppCompatActivity {
     TextView score;
     int points = 0;
     Integer[] imageIds = {101, 102, 103, 104, 105, 106, 201, 202, 203, 204, 205, 206};
-    int img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
+    int img01, img02, img03, img04, img05, img06;
 
 
     @Override
@@ -197,20 +197,7 @@ public class GamePlay extends AppCompatActivity {
                 iv.setImageResource(img05);
             } else if (imageIds[card] == 106 || imageIds[card] == 206) {
                 iv.setImageResource(img06);
-            } /*else if (imageIds[card] == 201) {
-                iv.setImageResource(img07);
-            } else if (imageIds[card] == 202) {
-                iv.setImageResource(img08);
-            } else if (imageIds[card] == 203) {
-                iv.setImageResource(img09);
-            } else if (imageIds[card] == 204) {
-                iv.setImageResource(img11);
-            } else if (imageIds[card] == 205) {
-                iv.setImageResource(img11);
-            } else if (imageIds[card] == 206) {
-                iv.setImageResource(img12);
-            } */
-
+            }
 
         //check which image is selected and save it to temp var
         if (cardNumber == 1) {
