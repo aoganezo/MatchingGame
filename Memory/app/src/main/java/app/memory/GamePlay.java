@@ -313,7 +313,7 @@ public class GamePlay extends AppCompatActivity {
             } else if (clickedSecond == 11) {
                 iv12.setVisibility(View.INVISIBLE);
             }
-            
+
         }
 
         //  Needs a drawable named back
