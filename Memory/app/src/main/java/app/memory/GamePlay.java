@@ -390,18 +390,18 @@ public class GamePlay extends AppCompatActivity {
 
     private void frontOfCardResources() {
         Log.i("test", "test, entered front resources");
-     /*   img01 = R.mipmap.hippo;
+        img01 = R.mipmap.hippo;
         img02 = R.mipmap.hippo;
-        img03 = R.mipmap.image1;
-        img04 = R.mipmap.image1;
-        img05 = R.mipmap.image2;
-        img06 = R.mipmap.image2;
-        img07 = R.mipmap.image3;
-        img08 = R.mipmap.image3;
-        img09 = R.mipmap.image4;
-        img10 = R.mipmap.image4;
-        img11 = R.mipmap.image5;
-        img12 = R.mipmap.image5; */
+        img03 = R.mipmap.img1;
+        img04 = R.mipmap.img1;
+        img05 = R.mipmap.img2;
+        img06 = R.mipmap.img2;
+        img07 = R.mipmap.img3;
+        img08 = R.mipmap.img3;
+        img09 = R.mipmap.img4;
+        img10 = R.mipmap.img4;
+        img11 = R.mipmap.img5;
+        img12 = R.mipmap.img5;
         Log.i("test", "end fron resources");
     }
 }
