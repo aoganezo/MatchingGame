@@ -110,63 +110,63 @@ public class GamePlay extends AppCompatActivity {
                     case R.id.iv1:
                         Log.i("test", "gameplay, first image");
                         //theCard = Integer.parseInt((String) gridView.getTag());
-                        theCard = 101;
+                        theCard = 0;
                         Log.i("test", "flip card being called");
                         flipCard(iv1, theCard);
                         Log.i("test", "flip card call over");
                         break;
                     case R.id.iv2:
-                        theCard = 102;
+                        theCard = 1;
                         //int theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv2, theCard);
                         break;
                     case R.id.iv3:
-                        theCard = 103;
+                        theCard = 2;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv3, theCard);
                         break;
                     case R.id.iv4:
-                        theCard = 104;
+                        theCard = 3;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv4, theCard);
                         break;
                     case R.id.iv5:
-                        theCard = 105;
+                        theCard = 4;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv5, theCard);
                         break;
                     case R.id.iv6:
-                        theCard = 106;
+                        theCard = 5;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv6, theCard);
                         break;
                     case R.id.iv7:
-                        theCard = 107;
+                        theCard = 6;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv7, theCard);
                         break;
                     case R.id.iv8:
-                        theCard = 108;
+                        theCard = 7;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv8, theCard);
                         break;
                     case R.id.iv9:
-                        theCard = 109;
+                        theCard = 8;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv9, theCard);
                         break;
                     case R.id.iv10:
-                        theCard = 110;
+                        theCard = 9;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv10, theCard);
                         break;
                     case R.id.iv11:
-                        theCard = 111;
+                        theCard = 10;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv11, theCard);
                         break;
                     case R.id.iv12:
-                        theCard = 112;
+                        theCard = 11;
                         //theCard = Integer.parseInt((String) gridView.getTag());
                         flipCard(iv12, theCard);
                         break;
