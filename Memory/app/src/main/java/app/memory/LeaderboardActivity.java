@@ -32,25 +32,67 @@ public class LeaderboardActivity extends AppCompatActivity {
             }
         });
 
-        // score will only be 0 if the leaderboard button is clicked on the home screen, so if that is the case, don't add 0 to the leaderboard
-        if (score == 0){
-            return;
-        }
+        TextView score1_tv = (TextView) findViewById(R.id.score1_tv);
+        TextView score2_tv = (TextView) findViewById(R.id.score2_tv);
+        TextView score3_tv = (TextView) findViewById(R.id.score3_tv);
+        TextView score4_tv = (TextView) findViewById(R.id.score4_tv);
+        TextView score5_tv = (TextView) findViewById(R.id.score5_tv);
 
-        else {
+        if (score == 0) {
+
+            GlobalArrayList scores = GlobalArrayList.getInstance();
+            scores.sort();
+
+            if (scores.size() > 5) {
+                scores.remove(6);
+            }
+
+            if (scores.size() == 1)
+                score1_tv.setText(scores.get(0).toString());
+            if (scores.size() == 2) {
+                score1_tv.setText(scores.get(0).toString());
+                score2_tv.setText(scores.get(1).toString());
+            }
+            if (scores.size() == 3) {
+                score1_tv.setText(scores.get(0).toString());
+                score2_tv.setText(scores.get(1).toString());
+                score3_tv.setText(scores.get(2).toString());
+            }
+            if (scores.size() == 4) {
+                score1_tv.setText(scores.get(0).toString());
+                score2_tv.setText(scores.get(1).toString());
+                score3_tv.setText(scores.get(2).toString());
+                score4_tv.setText(scores.get(3).toString());
+            }
+            if (scores.size() == 5) {
+                score1_tv.setText(scores.get(0).toString());
+                score2_tv.setText(scores.get(1).toString());
+                score3_tv.setText(scores.get(2).toString());
+                score4_tv.setText(scores.get(3).toString());
+                score5_tv.setText(scores.get(4).toString());
+            }
+            if (scores.size() >= 5) {
+                scores.remove(6);
+                score1_tv.setText(scores.get(0).toString());
+                score2_tv.setText(scores.get(1).toString());
+                score3_tv.setText(scores.get(2).toString());
+                score4_tv.setText(scores.get(3).toString());
+                score5_tv.setText(scores.get(4).toString());
+
+            }
+        } else {
+
             //GlobalArrayList initiation
 
             GlobalArrayList scores = GlobalArrayList.getInstance();
             scores.add(score);
             scores.sort();
 
+            if (scores.size() > 5) {
+                scores.remove(6);
+            }
 
             //TextViews
-            TextView score1_tv = (TextView) findViewById(R.id.score1_tv);
-            TextView score2_tv = (TextView) findViewById(R.id.score2_tv);
-            TextView score3_tv = (TextView) findViewById(R.id.score3_tv);
-            TextView score4_tv = (TextView) findViewById(R.id.score4_tv);
-            TextView score5_tv = (TextView) findViewById(R.id.score5_tv);
 
             //Adding the sores to the leaderboard
 
@@ -78,17 +120,11 @@ public class LeaderboardActivity extends AppCompatActivity {
                 score4_tv.setText(scores.get(3).toString());
                 score5_tv.setText(scores.get(4).toString());
             }
-            if (scores.size() >= 5) {
-                score1_tv.setText(scores.get(0).toString());
-                score2_tv.setText(scores.get(1).toString());
-                score3_tv.setText(scores.get(2).toString());
-                score4_tv.setText(scores.get(3).toString());
-                score5_tv.setText(scores.get(4).toString());
-                scores.remove(6);
-            }
+
 
 
         }
-
     }
+
+
 }
