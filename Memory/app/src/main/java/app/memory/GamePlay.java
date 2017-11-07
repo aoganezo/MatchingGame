@@ -31,28 +31,12 @@ public class GamePlay extends AppCompatActivity {
     Integer[] imageIds = {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112};
     int img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
 
-    /*String[] values = {
-            "Hippo",
-            "Hippo",
-            "Hippo",
-            "Hippo",
-            "Hippo",
-            "Hippo",
-    };*/
 
-    /*int[] images = {
-            R.drawable.hippo,
-            R.drawable.hippo,
-            R.drawable.hippo,
-            R.drawable.hippo,
-            R.drawable.hippo,
-            R.drawable.hippo,
-    };*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_play);
-
+        Log.i("test", "ON CREATE - CREATED");
 
         /*
         int size;
@@ -91,7 +75,7 @@ public class GamePlay extends AppCompatActivity {
         iv10 = (ImageView) findViewById(R.id.iv10);
         iv11 = (ImageView) findViewById(R.id.iv11);
         iv12 = (ImageView) findViewById(R.id.iv12);
-
+        Log.i("test", "Found iv's");
         score = (TextView) findViewById(R.id.score);
 
         iv1.setTag("0");
@@ -106,17 +90,20 @@ public class GamePlay extends AppCompatActivity {
         iv1.setTag("9");
         iv1.setTag("10");
         iv1.setTag("11");
+        Log.i("test", "Tagged iv's");
 
-
+        Log.i("test", "calling front resources");
         frontOfCardResources();
+        Log.i("test", "done calling front resources.");
 
         Collections.shuffle(Arrays.asList(imageIds));
+        Log.i("test", "done shuffling ImageIds.");
 
         View.OnClickListener imageClickListener = new View.OnClickListener() {
-            //Log.i("test", "test1, gameplay, gridview created");
             int theCard;
             @Override
             public void onClick(View v) {
+                Log.i("test", "gameplay, an image clicked");
                 switch (v.getId()) {
                     case R.id.iv1:
                         theCard = Integer.parseInt((String) gridView.getTag());
@@ -173,6 +160,7 @@ public class GamePlay extends AppCompatActivity {
     }
 
     private void flipCard(ImageView iv, int card) {
+        Log.i("test", "flipcard() called");
         if (imageIds[card] == 101) {
             iv.setImageResource(img01);
         } else if (imageIds[card] == 102) {
@@ -218,6 +206,7 @@ public class GamePlay extends AppCompatActivity {
             cardNumber = 1;
             clickedSecond = card;
 
+            Log.i("test", "flip all card facedown");
             iv1.setEnabled(false);
             iv2.setEnabled(false);
             iv3.setEnabled(false);
@@ -242,6 +231,7 @@ public class GamePlay extends AppCompatActivity {
     }
 
     public void calculate() {
+        Log.i("test", "calculate() called");
         if (firstCard == secondCard) {
             if (clickedFirst == 0) {
                 iv1.setVisibility(View.INVISIBLE);
@@ -314,18 +304,19 @@ public class GamePlay extends AppCompatActivity {
         //  Needs a drawable named back
 
         else{
-            iv1.setImageResource(R.drawable.back);
-            iv2.setImageResource(R.drawable.back);
-            iv3.setImageResource(R.drawable.back);
-            iv4.setImageResource(R.drawable.back);
-            iv5.setImageResource(R.drawable.back);
-            iv6.setImageResource(R.drawable.back);
-            iv7.setImageResource(R.drawable.back);
-            iv8.setImageResource(R.drawable.back);
-            iv9.setImageResource(R.drawable.back);
-            iv10.setImageResource(R.drawable.back);
-            iv11.setImageResource(R.drawable.back);
-            iv12.setImageResource(R.drawable.back);
+            Log.i("test", "test, back pics set");
+            iv1.setImageResource(R.mipmap.back);
+            iv2.setImageResource(R.mipmap.back);
+            iv3.setImageResource(R.mipmap.back);
+            iv4.setImageResource(R.mipmap.back);
+            iv5.setImageResource(R.mipmap.back);
+            iv6.setImageResource(R.mipmap.back);
+            iv7.setImageResource(R.mipmap.back);
+            iv8.setImageResource(R.mipmap.back);
+            iv9.setImageResource(R.mipmap.back);
+            iv10.setImageResource(R.mipmap.back);
+            iv11.setImageResource(R.mipmap.back);
+            iv12.setImageResource(R.mipmap.back);
 
         }
 
@@ -346,6 +337,7 @@ public class GamePlay extends AppCompatActivity {
     }
 
     private void checkEndGame(){
+        Log.i("test", "checkEndGame called. Game is over.");
         if (iv1.getVisibility() == View.INVISIBLE &&
                 iv2.getVisibility() == View.INVISIBLE &&
                 iv3.getVisibility() == View.INVISIBLE &&
@@ -366,18 +358,20 @@ public class GamePlay extends AppCompatActivity {
 
 
     private void frontOfCardResources() {
-        img01 = R.drawable.hippo;
-        img02 = R.drawable.hippo;
-        img03 = R.drawable.hippo;
-        img04 = R.drawable.hippo;
-        img05 = R.drawable.hippo;
-        img06 = R.drawable.hippo;
-        img07 = R.drawable.hippo;
-        img08 = R.drawable.hippo;
-        img09 = R.drawable.hippo;
-        img10 = R.drawable.hippo;
-        img11 = R.drawable.hippo;
-        img12 = R.drawable.hippo;
+        Log.i("test", "test, entered front resources");
+        img01 = R.mipmap.hippo;
+        img02 = R.mipmap.hippo;
+        img03 = R.mipmap.hippo;
+        img04 = R.mipmap.hippo;
+        img05 = R.mipmap.hippo;
+        img06 = R.mipmap.hippo;
+        img07 = R.mipmap.hippo;
+        img08 = R.mipmap.hippo;
+        img09 = R.mipmap.hippo;
+        img10 = R.mipmap.hippo;
+        img11 = R.mipmap.hippo;
+        img12 = R.mipmap.hippo;
+        Log.i("test", "end fron resources");
 
     }
 //
