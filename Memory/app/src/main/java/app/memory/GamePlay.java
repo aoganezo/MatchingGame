@@ -108,52 +108,67 @@ public class GamePlay extends AppCompatActivity {
                 Log.i("test", "gameplay, an image clicked");
                 switch (v.getId()) {
                     case R.id.iv1:
-                        theCard = Integer.parseInt((String) gridView.getTag());
+                        Log.i("test", "gameplay, first image");
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        theCard = 101;
+                        Log.i("test", "flip card being called");
                         flipCard(iv1, theCard);
+                        Log.i("test", "flip card call over");
                         break;
                     case R.id.iv2:
-                        int theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 102;
+                        //int theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv2, theCard);
                         break;
                     case R.id.iv3:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 103;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv3, theCard);
                         break;
                     case R.id.iv4:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 104;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv4, theCard);
                         break;
                     case R.id.iv5:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 105;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv5, theCard);
                         break;
                     case R.id.iv6:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 106;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv6, theCard);
                         break;
                     case R.id.iv7:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 107;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv7, theCard);
                         break;
                     case R.id.iv8:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 108;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv8, theCard);
                         break;
                     case R.id.iv9:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 109;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv9, theCard);
                         break;
                     case R.id.iv10:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 110;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv10, theCard);
                         break;
                     case R.id.iv11:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 111;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv11, theCard);
                         break;
                     case R.id.iv12:
-                        theCard = Integer.parseInt((String) gridView.getTag());
-                        flipCard(iv1, theCard);
+                        theCard = 112;
+                        //theCard = Integer.parseInt((String) gridView.getTag());
+                        flipCard(iv12, theCard);
                         break;
                 }
             }
@@ -171,10 +186,6 @@ public class GamePlay extends AppCompatActivity {
         iv10.setOnClickListener(imageClickListener);
         iv11.setOnClickListener(imageClickListener);
         iv12.setOnClickListener(imageClickListener);
-
-
-
-
     }
 
     private void flipCard(ImageView iv, int card) {
@@ -208,6 +219,7 @@ public class GamePlay extends AppCompatActivity {
 
         //check which image is selected and save it to temp var
         if (cardNumber == 1) {
+            Log.i("test", "check which image, cardnumber == 1");
             firstCard = imageIds[card];
             if (firstCard > 200) {
                 firstCard = firstCard - 100;
@@ -217,6 +229,8 @@ public class GamePlay extends AppCompatActivity {
 
             iv.setEnabled(false);
         } else if (cardNumber == 2) {
+            Log.i("test", "check which image, cardnumber == 2");
+
             secondCard = imageIds[card];
             if (secondCard > 200) {
                 secondCard = secondCard - 100;
@@ -224,7 +238,7 @@ public class GamePlay extends AppCompatActivity {
             cardNumber = 1;
             clickedSecond = card;
 
-            Log.i("test", "flip all card facedown");
+            Log.i("test", "flip all cards facedown");
             iv1.setEnabled(false);
             iv2.setEnabled(false);
             iv3.setEnabled(false);
@@ -355,7 +369,6 @@ public class GamePlay extends AppCompatActivity {
     }
 
     private void checkEndGame(){
-        Log.i("test", "checkEndGame called. Game is over.");
         if (iv1.getVisibility() == View.INVISIBLE &&
                 iv2.getVisibility() == View.INVISIBLE &&
                 iv3.getVisibility() == View.INVISIBLE &&
@@ -368,6 +381,7 @@ public class GamePlay extends AppCompatActivity {
                 iv10.getVisibility() == View.INVISIBLE &&
                 iv11.getVisibility() == View.INVISIBLE &&
                 iv12.getVisibility() == View.INVISIBLE ) {
+            Log.i("test", "checkEndGame called. Game is over.");
             Intent to_game_over = new Intent(GamePlay.this, GameOverActivity.class);
             to_game_over.putExtra("score", points);
             startActivity(to_game_over);
