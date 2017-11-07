@@ -390,7 +390,7 @@ public class GamePlay extends AppCompatActivity {
 
     private void frontOfCardResources() {
         Log.i("test", "test, entered front resources");
-        img01 = R.mipmap.hippo;
+     /*   img01 = R.mipmap.hippo;
         img02 = R.mipmap.hippo;
         img03 = R.mipmap.image1;
         img04 = R.mipmap.image1;
@@ -401,7 +401,7 @@ public class GamePlay extends AppCompatActivity {
         img09 = R.mipmap.image4;
         img10 = R.mipmap.image4;
         img11 = R.mipmap.image5;
-        img12 = R.mipmap.image5;
+        img12 = R.mipmap.image5; */
         Log.i("test", "end fron resources");
     }
 }
