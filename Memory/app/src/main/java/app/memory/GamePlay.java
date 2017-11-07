@@ -105,6 +105,8 @@ public class GamePlay extends AppCompatActivity {
             int theCard;
             @Override
             public void onClick(View v) {
+                points = points + 1;
+                score.setText("Clicks: " + points);
                 Log.i("test", "gameplay, an image clicked");
                 switch (v.getId()) {
                     case R.id.iv1:
@@ -253,7 +255,7 @@ public class GamePlay extends AppCompatActivity {
                 }
             }, 1000);
         }
-        points = points + 2;
+
     }
 
     public void calculate() {
@@ -311,9 +313,7 @@ public class GamePlay extends AppCompatActivity {
             } else if (clickedSecond == 11) {
                 iv12.setVisibility(View.INVISIBLE);
             }
-
-
-            score.setText("Score: " + points);
+            
         }
 
         //  Needs a drawable named back
@@ -366,7 +366,7 @@ public class GamePlay extends AppCompatActivity {
                 iv12.getVisibility() == View.INVISIBLE ) {
             Log.i("test", "checkEndGame called. Game is over.");
             Intent to_game_over = new Intent(GamePlay.this, GameOverActivity.class);
-            to_game_over.putExtra("score", points);
+            to_game_over.putExtra("final_score", points);
             startActivity(to_game_over);
         }
     }
