@@ -180,28 +180,28 @@ public class GamePlay extends AppCompatActivity {
 
     private void flipCard(ImageView iv, int card) {
         Log.i("test", "flipcard() called");
-        if (imageIds[card] == 101) {
-            iv.setImageResource(img01);
-        } else if (imageIds[card] == 102) {
-            iv.setImageResource(img02);
-        } else if (imageIds[card] == 103) {
-            iv.setImageResource(img03);
-        } else if (imageIds[card] == 104) {
-            iv.setImageResource(img04);
-        } else if (imageIds[card] == 105) {
-            iv.setImageResource(img05);
-        } else if (imageIds[card] == 106) {
-            iv.setImageResource(img06);
-        } else if (imageIds[card] == 107) {
-            iv.setImageResource(img07);
-        } else if (imageIds[card] == 108) {
-            iv.setImageResource(img08);
-        } else if (imageIds[card] == 109) {
-            iv.setImageResource(img09);
-        } else if (imageIds[card] == 110) {
-            iv.setImageResource(img11);
-        } else if (imageIds[card] == 111) {
-            iv.setImageResource(img11);
+            if (imageIds[card] == 101) {
+                iv.setImageResource(img01);
+            } else if (imageIds[card] == 102) {
+                iv.setImageResource(img02);
+            } else if (imageIds[card] == 103) {
+                iv.setImageResource(img03);
+            } else if (imageIds[card] == 104) {
+                iv.setImageResource(img04);
+            } else if (imageIds[card] == 105) {
+                iv.setImageResource(img05);
+            } else if (imageIds[card] == 106) {
+                iv.setImageResource(img06);
+            } else if (imageIds[card] == 107) {
+                iv.setImageResource(img07);
+            } else if (imageIds[card] == 108) {
+                iv.setImageResource(img08);
+            } else if (imageIds[card] == 109) {
+                iv.setImageResource(img09);
+            } else if (imageIds[card] == 110) {
+                iv.setImageResource(img11);
+            } else if (imageIds[card] == 111) {
+                iv.setImageResource(img11);
         } else if (imageIds[card] == 112) {
             iv.setImageResource(img12);
         }
