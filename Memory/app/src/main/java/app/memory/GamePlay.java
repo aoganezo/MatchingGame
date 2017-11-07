@@ -253,6 +253,7 @@ public class GamePlay extends AppCompatActivity {
                 }
             }, 1000);
         }
+        points = points + 2;
     }
 
     public void calculate() {
@@ -310,8 +311,7 @@ public class GamePlay extends AppCompatActivity {
             } else if (clickedSecond == 11) {
                 iv12.setVisibility(View.INVISIBLE);
             }
-
-            points ++;
+            
             score.setText("Score: " + points);
         }
 
