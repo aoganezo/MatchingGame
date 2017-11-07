@@ -404,17 +404,4 @@ public class GamePlay extends AppCompatActivity {
         img12 = R.mipmap.image5;
         Log.i("test", "end fron resources");
     }
-//
-//        gridView.setOnItemClickListener(new OnItemClickListener() {
-//            public void onItemClick(AdapterView<?> parent,
-//                                    View v, int position, long id){
-//                // Send intent to SingleViewActivity
-//                Intent i = new Intent(getApplicationContext(), SingleViewActivity.class);
-//                // Pass image index
-//                i.putExtra("id", position);
-//                startActivity(i);
-//            }
-//        });
-
-
 }
