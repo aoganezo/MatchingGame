@@ -3,6 +3,7 @@ package app.memory;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +21,7 @@ public class DifficultyActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                Log.i("test","to game play");
                 Button button = (Button) v;
                 Intent to_gameplay = new Intent(DifficultyActivity.this, GamePlay.class);
                 to_gameplay.putExtra("mode", button.getText().toString());

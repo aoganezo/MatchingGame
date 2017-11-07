@@ -356,7 +356,6 @@ public class GamePlay extends AppCompatActivity {
         }
     }
 
-
     private void frontOfCardResources() {
         Log.i("test", "test, entered front resources");
         img01 = R.mipmap.hippo;
