@@ -81,17 +81,17 @@ public class GamePlay extends AppCompatActivity {
 
 
         iv1.setTag("0");
-        iv1.setTag("1");
-        iv1.setTag("2");
-        iv1.setTag("3");
-        iv1.setTag("4");
-        iv1.setTag("5");
-        iv1.setTag("6");
-        iv1.setTag("7");
-        iv1.setTag("8");
-        iv1.setTag("9");
-        iv1.setTag("10");
-        iv1.setTag("11");
+        iv2.setTag("1");
+        iv3.setTag("2");
+        iv4.setTag("3");
+        iv5.setTag("4");
+        iv6.setTag("5");
+        iv7.setTag("6");
+        iv8.setTag("7");
+        iv9.setTag("8");
+        iv10.setTag("9");
+        iv11.setTag("10");
+        iv12.setTag("11");
         Log.i("test", "Tagged iv's");
 
         Log.i("test", "calling front resources");
