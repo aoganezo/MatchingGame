@@ -154,7 +154,6 @@ public class GamePlay extends AppCompatActivity {
                         flipCard(iv1, theCard);
                         break;
                 }
-
             }
         };
     }
