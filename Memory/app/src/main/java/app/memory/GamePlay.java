@@ -75,8 +75,10 @@ public class GamePlay extends AppCompatActivity {
         iv10 = (ImageView) findViewById(R.id.iv10);
         iv11 = (ImageView) findViewById(R.id.iv11);
         iv12 = (ImageView) findViewById(R.id.iv12);
+
         Log.i("test", "Found iv's");
         score = (TextView) findViewById(R.id.score);
+
 
         iv1.setTag("0");
         iv1.setTag("1");
@@ -157,6 +159,23 @@ public class GamePlay extends AppCompatActivity {
 
             }
         };
+
+        iv1.setOnClickListener(imageClickListener);
+        iv2.setOnClickListener(imageClickListener);
+        iv3.setOnClickListener(imageClickListener);
+        iv4.setOnClickListener(imageClickListener);
+        iv5.setOnClickListener(imageClickListener);
+        iv6.setOnClickListener(imageClickListener);
+        iv7.setOnClickListener(imageClickListener);
+        iv8.setOnClickListener(imageClickListener);
+        iv9.setOnClickListener(imageClickListener);
+        iv10.setOnClickListener(imageClickListener);
+        iv11.setOnClickListener(imageClickListener);
+        iv12.setOnClickListener(imageClickListener);
+
+
+
+
     }
 
     private void flipCard(ImageView iv, int card) {
