@@ -35,6 +35,8 @@ public class DifficultyActivity extends AppCompatActivity {
         ez_button.setOnClickListener(listener);
         not_ez_button.setOnClickListener(listener);
 
+        ez_button.setEnabled(false);
+        not_ez_button.setEnabled(false);
     }
 
 }
