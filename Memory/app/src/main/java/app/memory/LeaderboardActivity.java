@@ -44,7 +44,7 @@ public class LeaderboardActivity extends AppCompatActivity {
             scores.sort();
 
             if (scores.size() > 5) {
-                scores.remove(6);
+                scores.remove(5);
             }
 
             if (scores.size() == 1)
@@ -89,7 +89,7 @@ public class LeaderboardActivity extends AppCompatActivity {
             scores.sort();
 
             if (scores.size() > 5) {
-                scores.remove(6);
+                scores.remove(5);
             }
 
             //TextViews
