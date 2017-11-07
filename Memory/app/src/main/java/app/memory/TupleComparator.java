@@ -3,8 +3,10 @@ package app.memory;
 import java.util.Comparator;
 
 /**
- * Created by safea on 11/4/2017.
+ * Created by Austin on 11/4/2017.
  */
+
+// Not used because it did not work as intended, but we'll keep it to try and fix it at a later date
 
 public class TupleComparator implements Comparator<Tuple> {
 

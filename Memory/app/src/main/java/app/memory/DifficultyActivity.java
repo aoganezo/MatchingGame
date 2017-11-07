@@ -29,6 +29,8 @@ public class DifficultyActivity extends AppCompatActivity {
             }
         };
 
+        //As of now, there is only one difficulty, so the buttons will all do the same thing
+
         two_ez_button.setOnClickListener(listener);
         ez_button.setOnClickListener(listener);
         not_ez_button.setOnClickListener(listener);
