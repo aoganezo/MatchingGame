@@ -80,6 +80,7 @@ public class GamePlay extends AppCompatActivity {
         iv11 = (ImageView) findViewById(R.id.iv11);
         iv12 = (ImageView) findViewById(R.id.iv12);
         Button button_reset = (Button) findViewById(R.id.button_reset);
+        Button button_exit = (Button) findViewById(R.id.button_exit);
 
         Log.i("test", "Found iv's");
         score = (TextView) findViewById(R.id.score);
@@ -110,8 +111,6 @@ public class GamePlay extends AppCompatActivity {
             int theCard;
             @Override
             public void onClick(View v) {
-                points = points + 1;
-                score.setText("Clicks: " + points);
                 Log.i("test", "gameplay, an image clicked");
                 switch (v.getId()) {
                     case R.id.iv1:
@@ -121,62 +120,76 @@ public class GamePlay extends AppCompatActivity {
                         Log.i("test", "flip card being called");
                         flipCard(iv1, theCard);
                         Log.i("test", "flip card call over");
+                        points = points + 1;
                         break;
                     case R.id.iv2:
                         int theCard = Integer.parseInt((String) v.getTag());
                         Log.i("test", "the tag:"+theCard);
                         flipCard(iv2, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv3:
                         theCard = Integer.parseInt((String) v.getTag());
                         Log.i("test", "the tag:"+theCard);
                         flipCard(iv3, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv4:
                         theCard = Integer.parseInt((String) v.getTag());
                         Log.i("test", "the tag:"+theCard);
                         flipCard(iv4, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv5:
                         theCard = Integer.parseInt((String) v.getTag());
                         Log.i("test", "the tag:"+theCard);
                         flipCard(iv5, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv6:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv6, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv7:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv7, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv8:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv8, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv9:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv9, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv10:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv10, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv11:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv11, theCard);
+                        points = points + 1;
                         break;
                     case R.id.iv12:
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv12, theCard);
+                        points = points + 1;
                         break;
                     case R.id.button_reset:
+                        recreate();
                         break;
                     case R.id.button_exit:
-                        Toast.makeText(getApplicationContext(), "msg msg", Toast.LENGTH_SHORT).show();
                         finish();
+                        break;
 
                 }
+                score.setText("Clicks: " + points);
             }
         };
 
@@ -193,6 +206,7 @@ public class GamePlay extends AppCompatActivity {
         iv11.setOnClickListener(imageClickListener);
         iv12.setOnClickListener(imageClickListener);
         button_reset.setOnClickListener(imageClickListener);
+        button_exit.setOnClickListener(imageClickListener);
     }
 
     private void flipCard(ImageView iv, int card) {
