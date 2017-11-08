@@ -84,7 +84,7 @@ public class GamePlay extends AppCompatActivity {
 
         Log.i("test", "Found iv's");
         score = (TextView) findViewById(R.id.score);
-
+        score.setText("Clicks: " + points);
 
         iv1.setTag("0");
         iv2.setTag("1");
