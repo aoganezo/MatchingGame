@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Button;
 
 import java.nio.file.Files;
 import java.util.Arrays;
@@ -78,6 +79,7 @@ public class GamePlay extends AppCompatActivity {
         iv10 = (ImageView) findViewById(R.id.iv10);
         iv11 = (ImageView) findViewById(R.id.iv11);
         iv12 = (ImageView) findViewById(R.id.iv12);
+        Button button_reset = (Button) findViewById(R.id.button_reset);
 
         Log.i("test", "Found iv's");
         score = (TextView) findViewById(R.id.score);
@@ -190,7 +192,7 @@ public class GamePlay extends AppCompatActivity {
         iv10.setOnClickListener(imageClickListener);
         iv11.setOnClickListener(imageClickListener);
         iv12.setOnClickListener(imageClickListener);
-        button_reset.setOnClickListener(listener);
+        button_reset.setOnClickListener(imageClickListener);
     }
 
     private void flipCard(ImageView iv, int card) {
