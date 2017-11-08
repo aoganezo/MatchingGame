@@ -1,5 +1,7 @@
 package app.memory;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +21,7 @@ import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.Collections;
 import android.os.Handler;
+import android.widget.Toast;
 
 public class GamePlay extends AppCompatActivity {
     ImageView iv1,iv2,iv3,iv4,iv5,iv6,iv7,iv8,iv9,iv10,iv11,iv12;
@@ -165,6 +168,12 @@ public class GamePlay extends AppCompatActivity {
                         theCard = Integer.parseInt((String) v.getTag());
                         flipCard(iv12, theCard);
                         break;
+                    case R.id.button_reset:
+                        break;
+                    case R.id.button_exit:
+                        Toast.makeText(getApplicationContext(), "msg msg", Toast.LENGTH_SHORT).show();
+                        finish();
+
                 }
             }
         };
@@ -181,6 +190,7 @@ public class GamePlay extends AppCompatActivity {
         iv10.setOnClickListener(imageClickListener);
         iv11.setOnClickListener(imageClickListener);
         iv12.setOnClickListener(imageClickListener);
+        button_reset.setOnClickListener(listener);
     }
 
     private void flipCard(ImageView iv, int card) {
